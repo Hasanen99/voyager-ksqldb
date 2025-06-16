@@ -1,0 +1,33 @@
+{
+    "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+    "type": "datasource",
+    "name": "Voyager:ksql",
+    "id": "pax-voyagerksql-datasource",
+    "metrics": true,
+    "backend": true,
+    "streaming": true,
+    "alerting": true,
+    "executable": "gpx_voyager_ksql",
+    "info": {
+        "description": "",
+        "author": {
+            "name": "Pax"
+        },
+        "keywords": [
+            "datasource"
+        ],
+        "logos": {
+            "small": "img/logo.jpg",
+            "large": "img/logo.jpg"
+        },
+        "links": [],
+        "screenshots": [],
+        "version": "1.0.0",
+        "updated": "2025-06-16"
+    },
+    "dependencies": {
+        "grafanaDependency": ">=10.4.0",
+        "plugins": []
+    },
+    "buildMode": "development"
+}
