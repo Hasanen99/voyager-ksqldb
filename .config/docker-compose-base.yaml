@@ -6,8 +6,8 @@ services:
     build:
       context: .
       args:
-        grafana_image: ${GRAFANA_IMAGE:-grafana}
-        grafana_version: ${GRAFANA_VERSION:-11.3.7}
+        grafana_image: ${GRAFANA_IMAGE:-grafana-enterprise}
+        grafana_version: ${GRAFANA_VERSION:-12.0.2}
         development: ${DEVELOPMENT:-false}
         anonymous_auth_enabled: ${ANONYMOUS_AUTH_ENABLED:-true}
     ports:
@@ -19,9 +19,9 @@ services:
     cap_add:
       - SYS_PTRACE
     volumes:
-      - ./dist:/var/lib/grafana/plugins/pax-voyagerksql-datasource
-      - ./provisioning:/etc/grafana/provisioning
-      - .:/root/pax-voyagerksql-datasource
+      - ../dist:/var/lib/grafana/plugins/pax-voyagerksql-datasource
+      - ../provisioning:/etc/grafana/provisioning
+      - ..:/root/pax-voyagerksql-datasource
 
     environment:
       NODE_ENV: development
